@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Author from "../components/infopages/Author.astro";
+import { AstroSeo } from "@astrolib/seo";
+---
+
+<AstroSeo
+  title="About"
+  description=""
+  canonical="https://www.internetery.com/author"
+  openGraph={{
+    url: "./images/tyler1.png",
+    title: "About Me - Tyler Bishop",
+    description: "Open Graph Description",
+    images: [
+      {
+        url: "./images/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Social open graph",
+        type: "image/jpeg",
+      },
+      {
+        url: "./images/logo.png",
+        width: 4096,
+        height: 4096,
+        alt: "Twitter open graph",
+        type: "image/jpeg",
+      },
+      { url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg" },
+      { url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg" },
+    ],
+    site_name: "Internetery",
+  }}
+  twitter={{
+    handle: "@TwitterHandle",
+    site: "@tylerbishop",
+    cardType: "summary_large_image",
+  }}
+/>
+<BaseLayout>
+  <Author />
+</BaseLayout>

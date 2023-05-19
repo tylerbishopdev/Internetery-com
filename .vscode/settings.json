@@ -1,0 +1,45 @@
+{
+    "window.title": "${activeEditorShort}${separator}${rootName}${separator}${profileName} ${separator} [Branch: main]",
+    "frontMatter.content.pageFolders": [
+        {
+            "title": "posts",
+            "path": "[[workspace]]/src/content/posts"
+        }
+    ],
+    "[markdown]": {
+        "editor.fontSize": 14,
+        "editor.lineHeight": 26,
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 64,
+        "editor.lineNumbers": "off",
+        "editor.quickSuggestions": false,
+        "editor.minimap.enabled": false
+    },
+    "frontMatter.taxonomy.tags": [
+        "Remix",
+        "UIUX",
+        "ai content",
+        "arrays",
+        "calesthenics",
+        "cats",
+        "comedy",
+        "darkmode",
+        "domains",
+        "gradients",
+        "html",
+        "javascript",
+        "lexingtonthemes",
+        "natty",
+        "nelson mandela",
+        "powershell",
+        "remix",
+        "responsive",
+        "tailwind",
+        "terminal",
+        "typography",
+        "wild'n out"
+    ],
+    "frontMatter.taxonomy.categories": [
+        "website-publishing"
+    ]
+}

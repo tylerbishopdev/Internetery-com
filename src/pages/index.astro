@@ -1,0 +1,60 @@
+---
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("posts");
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/landing/Hero.astro";
+import EntriesOne from "../components/entries/EntriesOne.astro";
+import Subscribe from "../components/forms/Subscribe.astro";
+import { AstroSeo } from "@astrolib/seo";
+---
+<AstroSeo
+  title="The Internetery"
+  description="A repository of creative content and ideas inspired by an open and free web."
+  canonical="https://www.internetery.com"
+  openGraph={{
+    url: "./images/ery.png",
+    title: "Internetery",
+    description: "A place for content creators made by a content creator",
+    images: [
+      {
+        url: "./images/ery.png",
+        width: 1200,
+        height: 630,
+        alt: "Social open graph",
+        type: "image/jpeg",
+      },
+    ],
+    site_name: "Internetery",
+  }}
+  twitter={{
+    handle: "@TwitterHandle",
+    site: "@stylerbishop",
+    cardType: "summary_large_image",
+  }}
+/>
+<BaseLayout>
+ 
+  <section>
+    <div class="max-w-6xl mx-auto px-8 py-12">
+      <div
+        class="mt-6 gap-x-8 gap-y-24 grid grid-cols-2 lg:grid-cols-4 ">
+        {
+          allPosts
+            .slice()
+            .map((post) => (
+              <EntriesOne
+                url={"/posts/" + post.slug}
+                title={post.data.title}
+                description={post.data.description}
+                alt={post.data.title}
+                pubDate={post.data.pubDate.toString().slice(0, 10)}
+                author={post.data.author}
+                image={post.data.image.url}
+              />
+            ))
+        }
+      </div>
+    </div>
+  </section>
+ 
+</BaseLayout>
