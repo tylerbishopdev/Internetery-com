@@ -2,6 +2,14 @@
 
 Home of the internetery on Astro.
 
+Made with Astro, styled with Tailwind, and using VS Code ext. w/ Frontmatter CMS to add dyanmic markdown articles.
+
+## Site is stupid fast 
+
+100/100 Google Pagespeed.
+
+Made the way the web should be and published to Cloudflare for free :)
+
 ## Commands
 
 All commands are run from the root of the project, from a terminal:
@@ -16,4 +24,4 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro --help` | Get help using the Astro CLI                     |
 
 ## For more info
-Checkout Lexington's  [documentation](https://lexingtonthemes.com/documentation/quick-start/#file-structure)
+Checkout The Site  [documentation](https://www.internetery.com)
